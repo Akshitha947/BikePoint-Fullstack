@@ -6,8 +6,9 @@ const cors = require('cors');
 const app = express();
 connectDB();
 
+
 const corsOptions = {
-  origin: 'https://stupendous-smakager-127e92.netlify.app'
+  origin: 'https://stupendous-smakager-127e92.netlify.app' 
 };
 app.use(cors(corsOptions));
 
