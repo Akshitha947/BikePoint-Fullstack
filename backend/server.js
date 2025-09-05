@@ -4,20 +4,19 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 
 const app = express();
+
+
 connectDB();
 
 
-const corsOptions = {
-  origin: 'https://stupendous-smakager-127e92.netlify.app'
-};
-app.use(cors(corsOptions));
+app.use(cors({ origin: 'https://stupendous-smakager-127e92.netlify.app' }));
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the BikePoint Backend API. The server is running!');
-});
 
+app.get('/', (req, res) => {
+  res.send('BikePoint API is running...');
+});
 
 
 app.use('/api/bookings', require('./routes/bookingRoutes'));
