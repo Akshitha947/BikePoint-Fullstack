@@ -16,7 +16,7 @@ const LoginPage = ({ showPopup }) => {
         setIsLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', {
+            const response = await axios.post('https://bikepoint-backend-vf44.onrender.com/api/auth/login', {
                 username,
                 password
             });

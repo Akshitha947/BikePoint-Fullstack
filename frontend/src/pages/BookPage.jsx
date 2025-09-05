@@ -14,7 +14,7 @@ const BookPage = () => {
     e.preventDefault();
     setError(false);
     try {
-      const url = 'http://localhost:5000/api/bookings';
+      const url = 'https://bikepoint-backend-vf44.onrender.com/api/bookings';
       const response = await axios.post(url, formData);
       console.log('Booking successful:', response.data);
       setSubmitted(true);
